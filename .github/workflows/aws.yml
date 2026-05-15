@@ -3,7 +3,7 @@ name: Deploy to ECS
 on:
   push:
     branches:
-      - staging
+      - main
 
 jobs:
   deploy:
@@ -38,6 +38,6 @@ jobs:
       - name: Force ECS Deployment
         run: |
           aws ecs update-service \
-            --cluster hello-world-c2 \
-            --service hello-world-task-service \
+            --cluster hello-world-cluster-jkljlj \
+            --service hello-world-task-definition-0u09j-service-dabvk60h \
             --force-new-deployment
